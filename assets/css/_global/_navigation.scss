@@ -1,0 +1,58 @@
+// NAVIGATION
+nav {
+  width: 100%;
+  max-height: 4rem;
+  padding: 1rem;
+  button.menu-toggle {
+    display: flex;
+    margin: 0 0 0 auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: $primary;
+    }
+    svg.menu-toggle-open {@include transition(width, 0.325s, ease);}
+    svg.menu-toggle-close {
+      width: 0;
+      @include transition(width, 0.325s, ease);
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include transform(translateX(-100vw));
+    @include transition(all, 0.325s, ease);
+    li {
+      margin: 0 0 1rem 0;
+    }
+    li a {
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  nav {
+    button.menu-toggle {display: none;}
+    ul {
+      flex-direction: row;
+      justify-content: flex-end;
+      height: auto;
+      max-height: none;
+      @include transform(translateX(0));
+      li {
+        margin: 0 0 0 1rem;
+      }
+      li a {
+      }
+    }
+  }
+}

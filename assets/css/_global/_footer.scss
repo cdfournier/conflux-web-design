@@ -2,6 +2,77 @@
 footer {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 2rem);
+  width: 100%;
   margin: 0 auto;
+  padding: 2rem;
+  nav {
+    padding: 0;
+    max-height: none;
+    ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: auto;
+      max-height: none;
+      @include transform(translateX(0));
+      li {
+        margin: 0.5rem 0 0;
+        width: calc(50% - 1rem);
+        @include font-bold;
+        ul {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          li {
+            width: 100%;
+            margin: 0 0 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .business {
+    display: flex;
+    flex-direction: column-reverse;
+    .legal {
+      margin: 1rem 0 0;
+      ul {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          width: calc(50% - 1rem);
+          margin-top: calc(0.8rem * 0.5);
+          margin-bottom: calc(0.8rem * 0.5);
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 48rem) {
+  footer {
+    .business {
+      flex-direction: row;
+      justify-content: space-between;
+      .legal {
+        margin: 0;
+        ul {
+          justify-content: flex-end;
+          width: auto;
+          text-align: right;
+          li {
+            width: auto;
+            padding: 0 0 0 1rem;
+          }
+        }
+      }
+    }
+  }
 }

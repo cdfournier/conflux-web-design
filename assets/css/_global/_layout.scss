@@ -1,19 +1,30 @@
+// GRADIENTS: WELCOME
+.welcome {
+  background: rgb(150,233,251);
+  background: linear-gradient(0deg, rgba(150,233,251,1) 10%, rgba(19,174,194,1) 100%);
+
+  background: rgb(254,139,76);
+  background: linear-gradient(0deg, rgba(254,139,76,1) 0%, rgba(108,61,157,1) 100%);
+
+  background: rgb(38,237,168);
+  background: linear-gradient(0deg, rgba(38,237,168,1) 0%, rgba(33,121,184,1) 100%);
+
+  background: rgb(229,69,107);
+  background: linear-gradient(0deg, rgba(229,69,107,1) 0%, rgba(203,52,133,1) 100%);
+}
+
+
 // LAYOUT
 main {
+  margin: 3.5rem 0 0;
   .row {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 2rem);
+    width: calc(100% - 4rem);
     margin: 0 auto;
     &.wide {width: 100%;}
     &.column {flex-direction: column;}
-    .row {
-      width: 100%;
-      .column {
-        border: 1px solid gray;
-        background: lightgray;
-      }
-    }
+    .row {width: 100%;}
     .column {
       display: flex;
       flex-direction: column;
@@ -48,3 +59,8 @@ main {
     }
   }
 }
+
+
+// MODIFIERS
+.tall {min-height: 90vh;}
+.short {min-height: 45vh;}
