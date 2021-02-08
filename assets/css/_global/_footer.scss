@@ -55,7 +55,6 @@ footer {
   }
 }
 
-
 @media (min-width: 48rem) {
   footer {
     .business {
@@ -71,6 +70,18 @@ footer {
             width: auto;
             padding: 0 0 0 1rem;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  footer {
+    nav {
+      ul {
+        li {
+          width: calc((100% / 6) - 1rem);
         }
       }
     }
