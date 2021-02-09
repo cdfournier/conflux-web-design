@@ -16,7 +16,7 @@
 
 // LAYOUT
 main {
-  margin: 3.5rem 0 0;
+  margin: calc(3.5 * #{$nav-font-size}) 0 0;
   .row {
     display: flex;
     flex-direction: column;
@@ -62,5 +62,6 @@ main {
 
 
 // MODIFIERS
+.full {min-height: 100vh;}
 .tall {min-height: 90vh;}
 .short {min-height: 45vh;}

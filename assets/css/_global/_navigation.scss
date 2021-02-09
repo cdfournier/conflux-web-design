@@ -11,8 +11,8 @@ nav {
     background-color: transparent;
     cursor: pointer;
     svg {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: calc(1.5 * #{$nav-font-size});
+      height: calc(1.5 * #{$nav-font-size});
       fill: $primary;
     }
     svg.menu-toggle-open {@include transition(width, 0.325s, ease);}
@@ -32,7 +32,9 @@ nav {
     @include transform(translateX(-100vw));
     @include transition(all, 0.325s, ease);
     li {
-      margin: 0 0 1rem 0;
+		  margin-top: calc(0.5 * #{$nav-font-size});
+		  margin-bottom: calc(0.25 * #{$nav-font-size});
+			font-size: $nav-font-size;
     }
     li a {
     }

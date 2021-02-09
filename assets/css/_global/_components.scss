@@ -1,9 +1,10 @@
 // LOGO
 .logo {
   display: grid;
+  width: 4rem;
   svg {
     fill: $primary;
-    width: auto;
-    height: 4rem;
+    width: 100%;
+    height: auto;
   }
 }

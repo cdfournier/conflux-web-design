@@ -6,6 +6,7 @@ header {
   width: 100%;
   margin: 0;
   padding: 0;
+  background: white;
 }
 
 
@@ -30,7 +31,7 @@ header.open {
     max-height: 100vh;
     button.menu-toggle {
       svg.menu-toggle-open {width: 0;}
-      svg.menu-toggle-close {width: 2rem;}
+      svg.menu-toggle-close {width: calc(1.5 * #{$nav-font-size});;}
     }
     ul {
       width: 100%;
