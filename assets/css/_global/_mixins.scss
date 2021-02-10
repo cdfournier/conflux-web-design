@@ -36,3 +36,24 @@
   font-weight: 700;
   font-style: normal;
 }
+
+
+// GRADIENT BACKGROUNDS
+@mixin gradient-one {
+// 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background: linear-gradient(-90deg, $sky-g-a, $primary, $secondary, $sky-g-b);
+	background-size: 400% 400%;
+	animation: gradient-a 10s ease infinite;
+}
+
+@keyframes gradient-a {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

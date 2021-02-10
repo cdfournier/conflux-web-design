@@ -8,3 +8,46 @@
     height: auto;
   }
 }
+
+
+// BANNERS
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 2rem 4rem;
+  color: white;
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .content{
+    position: relative;
+    .logo svg {fill: white;}
+  }
+}
+
+
+// BACKGROUND GRADIENT BANDS
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  .band-one {
+    position: relative;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: calc(2 * #{$p-font-size});
+    @include gradient-one;
+  }
+}
