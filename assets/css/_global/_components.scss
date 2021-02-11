@@ -17,13 +17,16 @@
   position: relative;
   width: 100%;
   margin: 0;
-  padding: 2rem;
+  padding: calc(4 * #{$nav-font-size}) 2rem;
   .overlay, .background {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+  }
+  &.center {
+    justify-content: center;
   }
 }
 

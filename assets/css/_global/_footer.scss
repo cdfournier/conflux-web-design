@@ -31,6 +31,7 @@ footer {
         margin: calc(0.5 * #{$nav-font-size}) 0 0;
         width: calc(50% - 1rem);
         @include font-bold;
+        font-size: $nav-font-size;
         ul {
           display: flex;
           flex-direction: column;
@@ -69,22 +70,18 @@ footer {
   .business {
     display: flex;
     flex-direction: column-reverse;
-    .legal {
-      margin: 1rem 0 0;
-      ul {
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        li {
-          width: calc(50% - 1rem);
-          margin-top: calc(0.8rem * 0.5);
-          margin-bottom: calc(0.8rem * 0.5);
-          font-size: 0.8rem;
-        }
+    ul {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 100%;
+      margin: calc(0.5 * #{$small-font-size}) 0 0;
+      padding: 0;
+      list-style: none;
+      li {
+        width: auto;
+        margin: calc(0.5 * #{$small-font-size}) $small-font-size calc(1 * #{$small-font-size}) 0 0;
+        font-size: $small-font-size;
       }
     }
   }
@@ -94,27 +91,25 @@ footer {
   footer {
     nav {
       ul {
-        li {
-          width: calc((100% / 3) - 1rem);
-        }
+        li {width: calc((100% / 3) - 1rem);}
       }
     }
     .business {
       flex-direction: row;
+      align-items: center;
       justify-content: space-between;
-      .legal {
+      margin: calc(2 * #{$small-font-size}) 0 0;
+      ul {
+        justify-content: flex-end;
+        width: 100%;
         margin: 0;
-        min-width: 50%;
-        ul {
-          justify-content: flex-end;
-          width: 100%;
-          text-align: right;
-          li {
-            width: auto;
-            padding: 0 0 0 1rem;
-          }
+        text-align: right;
+        li {
+          width: auto;
+          margin: 0 0 0 calc(1 * #{$small-font-size});
         }
       }
+      small {margin: 0;}
     }
   }
 }
@@ -123,17 +118,12 @@ footer {
   footer {
     nav {
       ul {
-      li.logo {
-        width: inherit;
-        a:hover, a:focus {
-          svg {
-            fill: $secondary;
+        li {width: auto;}
+        li.logo {
+          width: inherit;
+          a:hover, a:focus {
+            svg {fill: $secondary;}
           }
-        }
-      }
-        li {
-          /* width: calc((100% / 7) - 1rem); */
-          width: auto;
         }
         li.top {
           a {margin: 0 0 0 auto;}

@@ -4,6 +4,7 @@ main {
   margin: 0;
   .row {
     display: flex;
+    align-content: baseline;
     flex-direction: column;
     width: calc(100% - 4rem);
     margin: 0 auto;
@@ -15,6 +16,7 @@ main {
       flex-direction: column;
       width: 100%;
     }
+    &.banner {width: 100%;}
   }
 }
 
