@@ -1,7 +1,6 @@
 // NAVIGATION
 nav {
   width: 100%;
-  max-height: 4rem;
   padding: 1rem;
   button.menu-toggle {
     display: flex;
@@ -32,11 +31,9 @@ nav {
     @include transform(translateX(-100vw));
     @include transition(all, 0.325s, ease);
     li {
-		  margin-top: calc(0.5 * #{$nav-font-size});
-		  margin-bottom: calc(0.25 * #{$nav-font-size});
-			font-size: $nav-font-size;
-    }
-    li a {
+		  margin-top: calc(1 * #{$nav-font-size});
+		  margin-bottom: calc(1 * #{$nav-font-size});
+			font-size: calc(2 * #{$nav-font-size});
     }
   }
 }
@@ -51,9 +48,9 @@ nav {
       max-height: none;
       @include transform(translateX(0));
       li {
-        margin: 0 0 0 1rem;
-      }
-      li a {
+        margin: 0 0 0 $nav-font-size;
+  			font-size: $nav-font-size;
+  			&:first-child {margin: 0;}
       }
     }
   }

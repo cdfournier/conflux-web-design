@@ -14,40 +14,51 @@
 .banner {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: relative;
-  z-index: 100;
   width: 100%;
   margin: 0;
-  padding: 2rem 2rem 4rem;
-  color: white;
-  .overlay {
+  padding: 2rem;
+  .overlay, .background {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
   }
-  .content{
-    position: relative;
-    .logo svg {fill: white;}
+}
+
+@media (min-width: 48rem) {
+  .banner {
+    h1 {font-size: calc(1.25 * #{$h1-font-size});}
+    p {
+      margin-top: calc(1.25 * (0.5 * #{$p-font-size}));
+      margin-bottom: calc(1.25 * (0.5 * #{$p-font-size}));
+      font-size: calc(1.25 * #{$p-font-size});
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .banner {
+    h1 {font-size: calc(1.5 * #{$h1-font-size});}
+    p {
+      margin-top: calc(1.5 * (0.5 * #{$p-font-size}));
+      margin-bottom: calc(1.5 * (0.5 * #{$p-font-size}));
+      font-size: calc(1.5 * #{$p-font-size});
+    }
   }
 }
 
 
 // BACKGROUND GRADIENT BANDS
 .background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   .band-one {
     position: relative;
+    top: calc(50% - 1rem);
     right: 0;
     left: 0;
     width: 100%;
-    height: calc(2 * #{$p-font-size});
+    height: calc(6 * #{$p-font-size});
     @include gradient-one;
   }
 }

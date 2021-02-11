@@ -131,14 +131,17 @@ footer {
           }
         }
       }
-        li {width: calc((100% / 7) - 1rem);}
+        li {
+          /* width: calc((100% / 7) - 1rem); */
+          width: auto;
+        }
         li.top {
           a {margin: 0 0 0 auto;}
           a:hover, a:focus {
             border-color: $secondary;
             svg {
               fill: $secondary;
-              @include transform (rotate(720deg));
+              @include transform (translateY(-0.5rem));
             }
           }
         }
