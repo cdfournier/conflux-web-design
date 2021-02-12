@@ -80,7 +80,7 @@ footer {
       list-style: none;
       li {
         width: auto;
-        margin: calc(0.5 * #{$small-font-size}) $small-font-size calc(1 * #{$small-font-size}) 0 0;
+        margin: calc(0.5 * #{$small-font-size}) $small-font-size 0 0;
         font-size: $small-font-size;
       }
     }
@@ -91,7 +91,15 @@ footer {
   footer {
     nav {
       ul {
-        li {width: calc((100% / 3) - 1rem);}
+        li {
+          width: calc((100% / 3) - 1rem);
+          ul {
+            li {
+              margin: calc(0.5 * #{$small-font-size}) 0 0;
+              &:first-child {margin: calc(0.5 * #{$small-font-size}) 0 0;}
+            }
+          }
+        }
       }
     }
     .business {
