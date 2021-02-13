@@ -6,6 +6,7 @@ main {
     display: flex;
     align-content: baseline;
     flex-direction: column;
+    justify-content: center;
     width: calc(100% - 4rem);
     margin: 0 auto;
     &.wide {width: 100%;}
@@ -15,6 +16,10 @@ main {
       display: flex;
       flex-direction: column;
       width: 100%;
+      &.border {
+        padding: 0 0 1rem;
+        border-bottom: 1px solid $gray-light;
+      }
     }
     &.banner {width: 100%;}
   }
@@ -24,8 +29,15 @@ main {
   main {
     .row {
       flex-direction: row;
+      align-content: center;
       flex-wrap: wrap;
       justify-content: space-between;
+      .column.border {
+        margin: 1rem 0;
+        padding: 0 1rem 1rem;
+        border: 1px solid $gray-light;
+        border-radius: 0.25rem;
+      }
     }
     .row.fifty {
       .column {width: calc(50% - 1rem);}

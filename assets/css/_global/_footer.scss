@@ -147,3 +147,21 @@ footer {
     }
   }
 }
+
+@media (min-width: 80rem) {
+  footer {
+    nav {
+      ul {
+        li {
+          ul {
+            li {
+              margin: calc(0.5 * #{$small-font-size-big}) 0 0;
+              &:first-child {margin: calc(0.5 * #{$small-font-size-big}) 0 0;}
+              font-size: $small-font-size-big;
+            }
+          }
+        }
+      }
+    }
+  }
+}

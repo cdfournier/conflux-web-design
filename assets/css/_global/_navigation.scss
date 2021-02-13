@@ -55,3 +55,14 @@ nav {
     }
   }
 }
+
+@media (min-width: 80rem) {
+  nav {
+    ul {
+      li {
+        margin: 0 0 0 $nav-font-size-big;
+  			font-size: $nav-font-size-big;
+      }
+    }
+  }
+}
