@@ -1,4 +1,30 @@
-//FOOTER
+// FOOTER
 footer {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem;
+  nav {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: none;
+    padding: 0;
+    ul {
+      width: calc(50% - 1rem);
+      height: auto;
+      max-height: none;
+      font-size: $small-font-size;
+      @include transform(translateX(0));
+      li {
+        margin: 0;
+        padding: 0 0 calc(0.5 * #{$small-font-size}) 0;
+        &:first-of-type {
+          @include sans-bold;
+        }
+      }
+    }
+  }
 }

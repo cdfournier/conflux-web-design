@@ -26,6 +26,7 @@ header.open {
   nav {
     height: 100vh;
     max-height: 100vh;
+    background: white;
     button.menu-toggle {
       svg.menu-toggle-open {width: 0;}
       svg.menu-toggle-close {width: 2rem;}
@@ -40,6 +41,9 @@ header.open {
     h2:before {
       width: 100%;
       margin: 1rem 0 1rem 0;
+    }
+    ul {
+      font-size: $p-font-size;
     }
   }
 }
