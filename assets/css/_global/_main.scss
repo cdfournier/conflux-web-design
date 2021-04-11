@@ -1,0 +1,37 @@
+// MAIN
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  section {width: 100%;}
+  .text {padding: 0 1rem;}
+  .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    .column {
+      width: 100%;
+      &.text {padding: 0 1rem;}
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  main {
+    .row {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .column.xl {width: 100%;}
+      .column.lg {width: 62%;}
+      .column.md {width: 50%;}
+      .column.sm {width: 38%;}
+    }
+  }
+}

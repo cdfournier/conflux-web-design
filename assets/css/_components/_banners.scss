@@ -1,0 +1,32 @@
+//BANNERS
+.banner {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  // z-index: 20;
+  width: 100%;
+  height: inherit;
+  min-height: 50vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 1rem 0;
+  background-attachment: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    -webkit-backdrop-filter: saturate(180%);
+    backdrop-filter: saturate(180%);
+  }
+  &.tall {min-height: 100vh;}
+}
