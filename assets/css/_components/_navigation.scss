@@ -14,38 +14,11 @@ nav {
       width: 1.5rem;
       height: 1.5rem;
     }
-    svg.menu-toggle-open {@include transition(width, 0.25s, ease);}
+    svg.menu-toggle-open {@include transition(width, 0.325s, ease);}
     svg.menu-toggle-close {
       width: 0;
-      @include transition(width, 0.25s, ease);
+      @include transition(width, 0.325s, ease);
     }
-  }
-  h2, p, ul {
-    @include transform(translateX(-150rem));
-    @include transition(all, 0.325s, ease);
-  }
-  h2, p {
-    width: 0;
-    height: 0;
-    max-height: 0;
-    margin: 0;
-    padding: 0;
-  }
-  h2:before {
-    display: block;
-    width: 0;
-    height: 1px;
-    margin: 0;
-    content: "";
-  }
-  p a {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    img {width: 0;}
   }
   ul {
     display: flex;
@@ -54,11 +27,15 @@ nav {
     max-height: 0;
     margin: 0;
     padding: 0;
+    font-size: $h3-font-size;
     list-style-type: none;
+    @include transform(translateX(-100vw));
+    @include transition(all, 0.325s, ease);
     li {
       display: flex;
       align-items: center;
       margin: 0;
+      padding: $p-font-size 0;
       @include transition(all, 0.325s, ease);
       img {display: none;}
     }
@@ -66,7 +43,54 @@ nav {
       display: flex;
       flex-direction: row;
       align-items: center;
-      text-decoration: none;
+    }
+  }
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    @include transform(translateX(0) scale(1));
+    @include transform-origin(left);
+    @include transition(all, 0.325s, ease);
+    svg {
+      width: auto;
+      height: 1.5rem;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: none;
+    button.menu-toggle {display: none;}
+    ul {
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-end;
+      height: auto;
+      max-height: none;
+      font-size: $small-font-size;
+      @include transform(translateX(0));
+      li {
+        padding: 0 0 0 $small-font-size;
+      }
+    }
+    .logo {
+      position: relative;
+      span {
+        display: block;
+        padding: 0 0 0 calc(0.5 * #{$p-font-size});
+        @include sans-bold;
+        font-size: $p-font-size;
+        text-transform: uppercase;
+      }
     }
   }
 }

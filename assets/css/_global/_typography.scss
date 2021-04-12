@@ -51,9 +51,59 @@ small {
 
 .visuallyhidden {display: none;}
 
+/*
+@media (min-width: 90rem) {
+  h1 {
+    padding: calc(0.5 * #{$h1-font-size-big}) 0 0;
+  	font-size: $h1-font-size-big;
+  }
+  h2 {
+    padding: calc(0.5 * #{$h2-font-size-big}) 0 0;
+  	font-size: $h2-font-size-big;
+  }
+  h3 {
+    padding: calc(0.5 * #{$h3-font-size-big}) 0 0;
+  	font-size: $h3-font-size-big;
+  }
+  h4 {
+    padding: calc(0.5 * #{$h4-font-size-big}) 0 0;
+  	font-size: $h4-font-size-big;
+  }
+  p {
+    max-width: 64rem;
+    padding: calc(0.5 * #{$p-font-size-big}) 0;
+  	font-size: $p-font-size-big;
+  }
+  small {
+    max-width: 64rem;
+    padding: calc(0.5 * #{$small-font-size-big}) 0;
+  	font-size: $small-font-size-big;
+  }
+}
+*/
 
 // PADDING MODIFIERS
 h1 + p, h2 + p, h3 + p, h4 + p,
 h1 + ol, h2 + ol, h3 + ol, h4 + ol,
 h1 + ul, h2 + ul, h3 + ul, h4 + ul,
 h1 + dl, h2 + dl, h3 + dl, h4 + dl, {padding-top: 0;}
+
+
+// LISTS
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+// TEXT LINK STYLES
+a {
+  display: inline-block;
+  position: relative;
+  @include sans-bold;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  @include transition(all, 0.325s, ease);
+}
