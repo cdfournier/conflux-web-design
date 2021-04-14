@@ -9,6 +9,7 @@ header {
   width: 100%;
   margin: 0;
   padding: 0;
+  background: transparent;
 }
 
 header.headroom {
@@ -16,9 +17,14 @@ header.headroom {
   will-change: transform
 }
 
-header.headroom--pinned {@include transform(translateY(0));}
+header.headroom--pinned {
+  background: white;
+  @include transform(translateY(0));
+}
 
-header.headroom--unpinned {@include transform(translateY(-100%));}
+header.headroom--unpinned {
+  @include transform(translateY(-100%));
+}
 
 header.headroom--top {
   nav {
@@ -40,6 +46,8 @@ header.open {
 // OPEN HEADER
 header.open {
   nav {
+    position: fixed;
+    top: 0;
     height: 100vh;
     max-height: 100vh;
     background: white;

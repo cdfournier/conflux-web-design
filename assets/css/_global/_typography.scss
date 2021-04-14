@@ -106,4 +106,13 @@ a {
   text-decoration: none;
   cursor: pointer;
   @include transition(all, 0.325s, ease);
+  &:after {
+    display: block;
+    width: 0%;
+    height: 0.125rem;
+    background: blue;
+    content: "";
+    @include transition(all, 0.325s, ease);
+  }
+  &:hover:after, &:focus:after {width: 100%;}
 }

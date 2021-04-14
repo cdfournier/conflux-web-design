@@ -32,17 +32,10 @@ nav {
     @include transform(translateX(-100vw));
     @include transition(all, 0.325s, ease);
     li {
-      display: flex;
-      align-items: center;
       margin: 0;
-      padding: $p-font-size 0;
+      padding: calc(2 * #{$p-font-size}) 0;
       @include transition(all, 0.325s, ease);
       img {display: none;}
-    }
-    li a {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
     }
   }
   .logo {
